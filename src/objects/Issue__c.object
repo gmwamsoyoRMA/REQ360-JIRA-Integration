@@ -1,0 +1,3207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>PackageXML</fullName>
+        <description>For Package.XML page</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Issue_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Story_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>PackageXML</label>
+    </fieldSets>
+    <fields>
+        <fullName>Actual_LOE__c</fullName>
+        <description>This is a rollup of all the Actual LOEs of the Tasks on this Issue. If there are no Tasks on the Issue, you can manually enter a value for this field. &apos;Cancelled&apos; Tasks will not be counted. Calculation occurs in LOERollup.cls, called by IssueTrigger</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a rollup of all the Actual LOEs of the Tasks on this Issue. If there are no Tasks on the Issue, you can manually enter a value for this field. &apos;Cancelled&apos; Tasks will not be counted.</inlineHelpText>
+        <label>Actual Task LOE Rollup</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_Result__c</fullName>
+        <description>Screenshot/explanation of the error that occurred.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Screenshot/explanation of the error that occurred.</inlineHelpText>
+        <label>Actual Result</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Backlog_Status__c</fullName>
+        <description>Why is this Issue in a Status of &apos;Backlog&apos;?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Why is this Issue in a Status of &apos;Backlog&apos;?</inlineHelpText>
+        <label>Backlog Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Scope</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Out Of Scope</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>New Requirement</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Browser__c</fullName>
+        <description>Please provide browser and version number Issue was experienced on</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please provide browser and version number Issue was experienced on</inlineHelpText>
+        <label>Browser</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Close_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Date/Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Component__c</fullName>
+        <description>Categorization of the area of work to be preformed such as &apos;Integration&apos; or &apos;Lead Management&apos;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Categorization of the area of work to be preformed such as &apos;Integration&apos; or &apos;Lead Management&apos;</inlineHelpText>
+        <label>Component</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipName>Issues</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Create_Story__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Create Story</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Current_Blocked_Duration__c</fullName>
+        <description>NOW() - Current_Blocked_Start_Date__c
+If the Issue is currently in a &apos;Blocked&apos; Status, this is the duration of that blocked state.</description>
+        <externalId>false</externalId>
+        <formula>NOW() - Current_Blocked_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>If the Issue is currently in a &apos;Blocked&apos; Status, this is the duration of that blocked state.</inlineHelpText>
+        <label>Current Blocked Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Blocked_Start_Date__c</fullName>
+        <description>When an Issue&apos;s Status is set to &apos;Blocked&apos;, this field is populated with the date. It is cleared when the Issue is no longer in a &apos;Blocked&apos; Status. Populated by StatusHistoryUtility.cls fired from IssueTrigger</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When an Issue&apos;s Status is set to &apos;Blocked&apos;, this field is populated with the date. It is cleared when the Issue is no longer in a &apos;Blocked&apos; Status.</inlineHelpText>
+        <label>Current Blocked Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DEV_LOE__c</fullName>
+        <description>Estimated level of effort to resolve in hours (hands on keyboard time)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated level of effort to resolve in hours (hands on keyboard time)</inlineHelpText>
+        <label>Estimated LOE</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Defect_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Defect Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Data</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Functional</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Regression</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Security</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UI/Cosmetic</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Validation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Workflow</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Detected_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Detected By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Issues</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Detected_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Detected Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Dev_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Main person who will be completing the work for this Story. They are also responsible for maintaining all Story information, including but not limited to the Status, Manifest Items, Test Cases, ETC.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Main person who will be completing the work for this Story. They are also responsible for maintaining all Story information, including but not limited to the Status, Manifest Items, Test Cases, ETC.</inlineHelpText>
+        <label>Dev Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Issues2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Environment__c</fullName>
+        <description>Which system or instance does this Issue need to be resolved in?
+i.e., &apos;developRMA Sandbox&apos; or &apos;Production&apos;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Which system or instance does this Issue need to be resolved in?
+i.e., &apos;developRMA Sandbox&apos; or &apos;Production&apos;</inlineHelpText>
+        <label>Environment</label>
+        <length>222</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Epic__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>A large user story. A story that can not be completed in one sprint and can be broken up into several stories.</inlineHelpText>
+        <label>Epic</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Epic__c.Product__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Product__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Epic__c</referenceTo>
+        <relationshipLabel>Issues</relationshipLabel>
+        <relationshipName>Issues</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Estimated_LOE_Rollup__c</fullName>
+        <description>This is a rollup of the Estimated LOEs on Tasks related to this Issue. &apos;Cancelled&apos; Tasks will not be counted. Calculation occurs in LOERollup.cls, called by IssueTrigger</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a rollup of the Estimated LOEs on Tasks related to this Issue. &apos;Cancelled&apos; Tasks will not be counted.</inlineHelpText>
+        <label>Estimated Task LOE Rollup</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expected_Result__c</fullName>
+        <description>What should have happened.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What should have happened.</inlineHelpText>
+        <label>Expected Result</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>External_Number__c</fullName>
+        <description>Id from external system which is associated with this Issue</description>
+        <externalId>false</externalId>
+        <label>External Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>External Source</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Erickson_JIRA</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_My_Issue__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+OR( Detected_By__r.Id =  $User.Id ,  Dev_Owner__r.Id =  $User.Id ,  QA_Owner__r.Id =  $User.Id ,  Resolution_Owner__r.Id =  $User.Id )
+, TRUE,FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is My Issue</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Issue_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Issue Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>My_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+Resolution_Owner__r.Id = $User.Id, &quot;Primary Owner &quot;,&quot;&quot;) &amp; 
+
+IF(
+Detected_By__r.Id = $User.Id, &quot;Detected &quot;,&quot;&quot;) &amp; 
+
+IF(
+Dev_Owner__r.Id = $User.Id, &quot;Dev &quot;,&quot;&quot;) &amp; 
+
+IF(
+CreatedBy.Id = $User.Id, &quot;Creator &quot;,&quot;&quot;) &amp; 
+
+IF(
+QA_Owner__r.Id = $User.Id, &quot;QA &quot;,&quot;&quot;)</formula>
+        <inlineHelpText>For showing the roles of the current user is listed on this issue based on user lookup values in the record</inlineHelpText>
+        <label>My Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originating_Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>If this Issue was converted from a Case, this field should be pre-populated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this Issue was converted from a Case, this field should be pre-populated.</inlineHelpText>
+        <label>Originating Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Issues</relationshipLabel>
+        <relationshipName>Issues</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Blocked_Duration__c</fullName>
+        <description>Used to calculate Total Blocked Duration. Value set in SatusHistoryUtitlity.cls (Fires from IssueTrigger). Amount of time the Issue has been previously blocked (this does not include the Current Blocked Duration).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to calculate Total Blocked Duration.  Amount of time the Issue has been previously blocked (this does not include the Current Blocked Duration).</inlineHelpText>
+        <label>Previous Blocked Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Status_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Previous Status Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Previous Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <description>P1 is Highest Priority,
+P5 is Lowest Priority</description>
+        <externalId>false</externalId>
+        <inlineHelpText>P1 is Highest Priority,
+P5 is Lowest Priority</inlineHelpText>
+        <label>Priority</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>P1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>P2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>P3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>P4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>P5</fullName>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Process_diagram_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Process diagram URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Container for deliverable portions of a Project which includes Epics,Sprints, Issues, and Stories</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Container for deliverable portions of a Project which includes Epics,Sprints, Issues, and Stories</inlineHelpText>
+        <label>Product</label>
+        <referenceTo>Product__c</referenceTo>
+        <relationshipName>Issues</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>QA_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Person responsible for making sure the completed work is as designed. May also create test cases, and must move Status from &apos;Ready for QA&apos; to &apos;QA Complete&apos;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Person responsible for making sure the completed work is as designed. May also create test cases, and must move Status from &apos;Ready for QA&apos; to &apos;QA Complete&apos;</inlineHelpText>
+        <label>QA Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Issues3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Release__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>A Product Release is the process of launching a new Product for a specific market or user base. This Issue is part of a Sprint which is part of this Release</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A Product Release is the process of launching a new Product for a specific market or user base. This Issue is part of a Sprint which is part of this Release</inlineHelpText>
+        <label>Release</label>
+        <referenceTo>Release__c</referenceTo>
+        <relationshipName>Issues</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Resolution_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Ultimate responsible party for ensuring the Issue is resolved.</inlineHelpText>
+        <label>Resolution Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Issues1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Screenshots_Video__c</fullName>
+        <externalId>false</externalId>
+        <label>Screenshots/Video</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Source_Story_Test_Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Failed Test Case that spawned this Issue</inlineHelpText>
+        <label>Source Story Test Case</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Test_Case__c.Story__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Source_Story__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Test_Case__c</referenceTo>
+        <relationshipLabel>Issues From Test Result Failures</relationshipLabel>
+        <relationshipName>Issues</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Story_Test_Result__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>The failed test result that spawned this issue</inlineHelpText>
+        <label>Source Story Test Result</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Test_Result__c.Test_Case__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Source_Story_Test_Case__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Test_Result__c</referenceTo>
+        <relationshipLabel>Issues</relationshipLabel>
+        <relationshipName>Issues</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Story__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Source Story</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Story__c.Product__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Product__c</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Story__c</referenceTo>
+        <relationshipLabel>Issues</relationshipLabel>
+        <relationshipName>Issues</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sprint_End__c</fullName>
+        <externalId>false</externalId>
+        <formula>Sprint__r.End_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sprint End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Sprint_Start__c</fullName>
+        <externalId>false</externalId>
+        <formula>Sprint__r.Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sprint Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Sprint__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>A collection of Stories and related Issues that make up a defined collection of work that is part of this Sprint&apos;s Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A collection of Stories and related Issues that make up a defined collection of work that is part of this Sprint&apos;s Release.</inlineHelpText>
+        <label>Sprint</label>
+        <referenceTo>Sprint__c</referenceTo>
+        <relationshipName>Issues</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Information about the current status value</inlineHelpText>
+        <label>Status Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Backlog</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Planned</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Blocked</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ready for Review</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ready for QA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>QA Complete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ready for UAT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UAT Complete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>As Designed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Duplicate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Unable to Reproduce</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reopened</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Steps_To_Reproduce__c</fullName>
+        <description>Example:
+1. Login as &apos;Bob&apos;
+2. Navigate to Account and click on &apos;New&apos;
+3. ...
+4. Thing that causes Error</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Example:
+1. Login as &apos;Bob&apos;
+2. Navigate to Account and click on &apos;New&apos;
+3. ...
+4. Thing that causes Error</inlineHelpText>
+        <label>Steps To Reproduce</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>StoryID__c</fullName>
+        <externalId>false</externalId>
+        <label>StoryID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Story_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Story Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Story__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(ISBLANK( StoryID__c ),ISBLANK( Story_Name__c )),&quot;Story not yet generated&quot;,HYPERLINK(&quot;/&quot;&amp; StoryID__c , Story_Name__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Story</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sub_Component__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>An area of work that is a subset of a main or parent Component. For example, a Component could be &apos;Forecasting&apos; and a Sub-Component of that could be &apos;Reports&apos;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>An area of work that is a subset of a main or parent Component. For example, a Component could be &apos;Forecasting&apos; and a Sub-Component of that could be &apos;Reports&apos;</inlineHelpText>
+        <label>Sub Component</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipName>Issues1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Total_Blocked_Duration__c</fullName>
+        <description>Current_Blocked_Duration__c + Previous_Blocked_Duration__c
+
+Total Amount of time this Issue has been Blocked</description>
+        <externalId>false</externalId>
+        <formula>Current_Blocked_Duration__c + Previous_Blocked_Duration__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Amount of time this Issue has been Blocked.</inlineHelpText>
+        <label>Total Blocked Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wireframe_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Wireframe URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>Issue</label>
+    <listViews>
+        <fullName>ALM_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>ALM MVP</value>
+        </filters>
+        <label>ALM Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>ALMMediaPropertiesCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>ALMMediaPropertiesCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>ALMMediaPropertiesCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>AOPA_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>AOPA</value>
+        </filters>
+        <label>AOPA Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AircraftOwnersandPilotsAssociationCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AircraftOwnersandPilotsAssociationCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AircraftOwnersandPilotsAssociationCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>AOPA_Phase3_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>AOPA3</value>
+        </filters>
+        <label>AOPA Phase3 Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AircraftOwnersandPilotsAssociationCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AircraftOwnersandPilotsAssociationCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AircraftOwnersandPilotsAssociationCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>AOPA_Phase_3_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>AOPA3</value>
+        </filters>
+        <label>AOPA Phase 3 Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ATA_TT_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Component__c</columns>
+        <columns>Source_Story__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>startsWith</operation>
+            <value>ATA</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Backlog</value>
+        </filters>
+        <label>ATA TT Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <group>External_Community_Developers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Alarm_com_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Alarm.com Refresh Release One</value>
+        </filters>
+        <label>Alarm.com Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AlarmcomCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AlarmcomCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AlarmcomCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Cap_One_Influencer_Support</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Capital One SalesCloud 3 Month Managed Service Offering</value>
+        </filters>
+        <label>Cap One Influencer Support</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>CapitalOneSparkCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>CapitalOneSparkCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>CapitalOneSparkCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Capital_One_Credit_Card</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Steps_To_Reproduce__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Expected_Result__c</columns>
+        <columns>Actual_Result__c</columns>
+        <columns>Source_Story__c</columns>
+        <columns>Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Capital One Credit Card Salescloud Implementation</value>
+        </filters>
+        <label>Capital One Credit Card</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>CapitalOneCreditCardPartnershipDivisionCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>CapitalOneCreditCardPartnershipDivisionCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>CapitalOneCreditCardPartnershipDivisionCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Cogent_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Cogent Salesforce Migration</value>
+        </filters>
+        <label>Cogent Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRoleAndSubordinates>CogentCommunicationsIncCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>CogentCommunicationsIncCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>CogentCommunicationsIncCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>DFT_Issues_Open</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Sprint__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Estimated_LOE_Rollup__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>startsWith</operation>
+            <value>Dupont Fabros</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Complete,Cancelled,Duplicate,Backlog</value>
+        </filters>
+        <label>DFT Issues - Open</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>DuPontFabrosTechnologyIncCustomerExecutive</portalRole>
+            <portalRole>DuPontFabrosTechnologyIncCustomerManager</portalRole>
+            <portalRole>DuPontFabrosTechnologyIncCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Deltek_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Deltek Service Cloud Project</value>
+        </filters>
+        <label>Deltek Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>DeltekCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>DeltekCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>DeltekCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Dexter_Solutions_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Dexter Solutions</value>
+        </filters>
+        <label>Dexter Solutions Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>EBI_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Backlog_Status__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Component__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>EBI PE and Steelbrick Implementation</value>
+        </filters>
+        <label>EBI Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>EBI_Issues1</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Source_Story__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>QA_Owner__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>EBI PE and Steelbrick Implementation</value>
+        </filters>
+        <label>EBI Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <allPartnerUsers></allPartnerUsers>
+            <portalRoleAndSubordinates>EmploymentBackgroundInvestigationsCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>EmploymentBackgroundInvestigationsCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>EmploymentBackgroundInvestigationsCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Epic_Games_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Epic Games SF Implementation</value>
+        </filters>
+        <label>Epic Games Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRole>EpicGamesCustomerExecutive</portalRole>
+            <portalRole>EpicGamesCustomerManager</portalRole>
+            <portalRole>EpicGamesCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Fannie_Mae_ET_Formatting_Issues</fullName>
+        <booleanFilter>1 AND (2 OR 3 OR 4 OR 5)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Fannie Mae - Exact Target Survey</value>
+        </filters>
+        <filters>
+            <field>Component__c</field>
+            <operation>equals</operation>
+            <value>Inbox Preview for Email Platforms</value>
+        </filters>
+        <filters>
+            <field>Component__c</field>
+            <operation>equals</operation>
+            <value>ET Cleanup Work</value>
+        </filters>
+        <filters>
+            <field>Component__c</field>
+            <operation>equals</operation>
+            <value>Reminder Email Formatting</value>
+        </filters>
+        <filters>
+            <field>Component__c</field>
+            <operation>equals</operation>
+            <value>Initial Email Formatting</value>
+        </filters>
+        <label>Fannie Mae ET Formatting Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>FannieMaeCustomerExecutive</portalRole>
+            <portalRole>FannieMaeCustomerManager</portalRole>
+            <portalRole>FannieMaeCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Fannie_Mae_Exact_Target_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Fannie Mae - Exact Target Survey</value>
+        </filters>
+        <label>Fannie Mae Exact Target Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>FannieMaeCustomerExecutive</portalRole>
+            <portalRole>FannieMaeCustomerManager</portalRole>
+            <portalRole>FannieMaeCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Fannie_Mae_FI_Project_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Detected_By__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Fannie Mae FI Project</value>
+        </filters>
+        <label>Fannie Mae FI Project Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>FannieMaeCustomerExecutive</portalRole>
+            <portalRole>FannieMaeCustomerManager</portalRole>
+            <portalRole>FannieMaeCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Fannie_Mae_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Fannie Mae</value>
+        </filters>
+        <label>Fannie Mae Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>FannieMaeCustomerExecutive</portalRole>
+            <portalRole>FannieMaeCustomerManager</portalRole>
+            <portalRole>FannieMaeCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Freedom_Partner_Issues_Pre_Dep</fullName>
+        <booleanFilter>1 AND (2 OR 3 OR 4)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Freedom Partners</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>8/25/2016 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>9/8/2016 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>9/15/2016 12:00 AM</value>
+        </filters>
+        <label>Freedom Partner Issues-Pre Dep</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Freedom_Partner_Seminar_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Backlog_Status__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Component__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Freedom Partners</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New,Backlog</value>
+        </filters>
+        <label>Freedom Partner Seminar Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>FreedomPartnersCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>FreedomPartnersCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>FreedomPartnersCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Gemalto_UAT_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Steps_To_Reproduce__c</columns>
+        <columns>Expected_Result__c</columns>
+        <columns>Actual_Result__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Detected_By__c</columns>
+        <columns>Detected_Date__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Component__c</field>
+            <operation>equals</operation>
+            <value>Gemalto UAT Issues</value>
+        </filters>
+        <label>Gemalto UAT Issues</label>
+        <sharedTo>
+            <portalRole>CogentIncCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Gorelick_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Component__c</columns>
+        <columns>Source_Story__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>startsWith</operation>
+            <value>HomeReady</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Backlog</value>
+        </filters>
+        <label>Gorelick Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <group>External_Community_Developers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>HF_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Homestead Funds Integration Project</value>
+        </filters>
+        <label>HF Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Interfolio_CPQ_Issues</fullName>
+        <columns>Story__c</columns>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Detected_By__c</columns>
+        <columns>Defect_Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Interfolio</value>
+        </filters>
+        <label>Interfolio CPQ Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>InterfolioCustomerExecutive</portalRole>
+            <portalRole>InterfolioCustomerManager</portalRole>
+            <portalRole>InterfolioCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>KION_Case_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>KION Case Management and SAP</value>
+        </filters>
+        <label>KION Case Management and SAP Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Klas_Comm_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Source_Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Klas Telecom - Community-Project</value>
+        </filters>
+        <label>Klas Comm Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>KlasTelecomIncCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>KlasTelecomIncCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>KlasTelecomIncCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Klas_Telecom_Inc_Wave_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Source_Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Klas Telecom,Inc. - Wave</value>
+        </filters>
+        <filters>
+            <field>Product__c</field>
+            <operation>notContain</operation>
+            <value>Community-Project</value>
+        </filters>
+        <label>Klas Telecom, Inc. - Wave Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>FannieMaeCustomerExecutive</portalRole>
+            <portalRole>FannieMaeCustomerManager</portalRole>
+            <portalRole>FannieMaeCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Measure_Aero_QS_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Source_Story__c</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Measure Aero Salescloud Quickstart</value>
+        </filters>
+        <label>Measure Aero QS - Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>MeasureAeroCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>MeasureAeroCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>MeasureAeroCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Merkle_Issues</fullName>
+        <columns>Story_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Defect_Type__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Expected_Result__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Resolution__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Merkle Sales Globalization</value>
+        </filters>
+        <label>Merkle Issues</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>MerkleDirectMarketingIncCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>MerkleDirectMarketingIncCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>MerkleDirectMarketingIncCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>My_HW_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>My_Role__c</columns>
+        <columns>Component__c</columns>
+        <columns>Resolution_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Hanley Wood</value>
+        </filters>
+        <label>My HW Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRole>EpicGamesCustomerExecutive</portalRole>
+            <portalRole>EpicGamesCustomerManager</portalRole>
+            <portalRole>EpicGamesCustomerUser</portalRole>
+            <portalRole>FMICustomerExecutive</portalRole>
+            <portalRole>FMICustomerManager</portalRole>
+            <portalRole>FMICustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>My_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>My_Role__c</columns>
+        <columns>Component__c</columns>
+        <columns>Resolution_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Is_My_Issue__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>My Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRole>EpicGamesCustomerExecutive</portalRole>
+            <portalRole>EpicGamesCustomerManager</portalRole>
+            <portalRole>EpicGamesCustomerUser</portalRole>
+            <portalRole>FMICustomerExecutive</portalRole>
+            <portalRole>FMICustomerManager</portalRole>
+            <portalRole>FMICustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>My_Open_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>My_Role__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Resolution_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Is_My_Issue__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Complete,As Designed,Duplicate,Unable to Reproduce</value>
+        </filters>
+        <label>My Open Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>NSC_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Source_Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>NSC - Sales Define/Design-Project</value>
+        </filters>
+        <label>NSC Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>NationalStudentClearinghouseCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>NationalStudentClearinghouseCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>NationalStudentClearinghouseCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>NSC_Issues_by_Yesh</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Source_Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>NSC - Sales Define/Design-Project</value>
+        </filters>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>equals</operation>
+            <value>Yesh Somashekhara</value>
+        </filters>
+        <label>NSC Issues by Yesh</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>NationalStudentClearinghouseCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>NationalStudentClearinghouseCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>NationalStudentClearinghouseCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Nexion</fullName>
+        <columns>NAME</columns>
+        <columns>Component__c</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Backlog_Status__c</columns>
+        <columns>Detected_By__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Nexion</value>
+        </filters>
+        <label>Nexion</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Orbcomm_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Source_Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Orbcomm Customer Community Portal Project Define Design</value>
+        </filters>
+        <label>Orbcomm Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>OrbcommCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>OrbcommCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>OrbcommCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Owl_Computing_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Owl Computing SFDC Design</value>
+        </filters>
+        <label>Owl Computing Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>OwlComputingTechnologiesIncCustomerExecutive</portalRole>
+            <portalRole>OwlComputingTechnologiesIncCustomerManager</portalRole>
+            <portalRole>OwlComputingTechnologiesIncCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>PhishMe_CPQ_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Source_Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>PhishMe-CPQ</value>
+        </filters>
+        <label>PhishMe-CPQ Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Phishme_Wave_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Source_Story__c</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Status__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Component__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>equals</operation>
+            <value>PhishMe PS Wave - Sprint 1,PhishMe PS Wave - Sprint 2</value>
+        </filters>
+        <label>Phishme Wave Issue Log</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>PhishmecomCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>PhishmecomCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>PhishmecomCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>RM_Connect_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Story_Name__c</columns>
+        <columns>Steps_To_Reproduce__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Actual_Result__c</columns>
+        <columns>Component__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>QA_Owner__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>RM Connect</value>
+        </filters>
+        <label>RM Connect Issues</label>
+        <sharedTo>
+            <group>Internal_Users</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Rockwell_Colling_CPQ_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Source_Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Rockwell Collins</value>
+        </filters>
+        <label>Rockwell Colling-CPQ Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SAIFE_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>SAIFE</value>
+        </filters>
+        <label>SAIFE Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>GreenZoneSystemsIncCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>GreenZoneSystemsIncCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>GreenZoneSystemsIncCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SBCTW_Smoke_Test_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Detected_By__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>QA_Owner__c</columns>
+        <columns>Detected_Date__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>SBC Org Merge Release 1</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>QA Complete,UAT Complete,Complete,Cancelled</value>
+        </filters>
+        <filters>
+            <field>Source_Story__c</field>
+            <operation>equals</operation>
+            <value>S-06288</value>
+        </filters>
+        <label>SBCTW Smoke Test Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>SterlingBackcheckCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>SterlingBackcheckCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>SterlingBackcheckCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Salesforce_System_Next_Sprint</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Component__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Salesforce System,RM Connect</value>
+        </filters>
+        <filters>
+            <field>Sprint_Start__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>NEXT_N_DAYS:30</value>
+        </filters>
+        <label>Salesforce System Next Sprint</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Sirius_Implementation</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>QA_Owner__c</columns>
+        <columns>Environment__c</columns>
+        <columns>Component__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Sirius Implementation</value>
+        </filters>
+        <label>Sirius Implementation</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TL_Issues_All</fullName>
+        <columns>NAME</columns>
+        <columns>Source_Story__c</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Travel Leaders</value>
+        </filters>
+        <label>TL Issues - All</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>TravelLeadersGroupLLCCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>TravelLeadersGroupLLCCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>TravelLeadersGroupLLCCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TL_VCOM_Impl_Client_to_Review</fullName>
+        <columns>NAME</columns>
+        <columns>Source_Story__c</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Status__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>startsWith</operation>
+            <value>Travel Leaders</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Ready for UAT,Blocked</value>
+        </filters>
+        <label>TL/VCOM Impl. (Client to Review)</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>TravelLeadersGroupLLCCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>TravelLeadersGroupLLCCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>TravelLeadersGroupLLCCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TS_MVP_A_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Component__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Teaching Strategies - MVP A</value>
+        </filters>
+        <label>Teaching Strategies MVP A Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerExecutive</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerManager</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TS_MVP_B_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Priority__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>QA_Owner__c</columns>
+        <columns>Component__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Teaching Strategies - MVP B</value>
+        </filters>
+        <label>Teaching Strategies MVP B Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerExecutive</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerManager</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TS_MVP_B_Issues_As_Designed_Dupe</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Priority__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>QA_Owner__c</columns>
+        <columns>Component__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Teaching Strategies - MVP B</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>As Designed,Duplicate,Unable to Reproduce</value>
+        </filters>
+        <label>TS MVP B Issues - As Designed/Dupe</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerExecutive</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerManager</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TS_MVP_B_Issues_RMA_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Defect_Type__c</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>QA_Owner__c</columns>
+        <columns>Component__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Teaching Strategies - MVP B</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New,Backlog,Planned,In Progress,Blocked,Ready for QA,Ready for UAT</value>
+        </filters>
+        <filters>
+            <field>Dev_Owner__c</field>
+            <operation>equals</operation>
+            <value>Alex Delgado,Rajeev Agarwal</value>
+        </filters>
+        <label>TS MVP B Issues - RMA Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerExecutive</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerManager</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TS_MVP_B_Issues_Ready_to_Review</fullName>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Priority__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>QA_Owner__c</columns>
+        <columns>Component__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Teaching Strategies - MVP B</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Ready for Review,Ready for QA,QA Complete,Ready for UAT,UAT Complete</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Complete</value>
+        </filters>
+        <label>TS MVP B Issues - Ready to Review</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerExecutive</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerManager</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TS_MVP_B_Issues_To_Work_On</fullName>
+        <columns>NAME</columns>
+        <columns>Defect_Type__c</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>QA_Owner__c</columns>
+        <columns>Component__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Teaching Strategies - MVP B</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New,Backlog,Planned,In Progress,Blocked</value>
+        </filters>
+        <label>TS MVP B Issues - To Work On</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerExecutive</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerManager</portalRole>
+            <portalRole>TeachingStrategiesIncCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TS_PD_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Teaching Strategies - MVP A</value>
+        </filters>
+        <label>TS PD 1 Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TTS_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Live Instruction</value>
+        </filters>
+        <label>TTS Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>TrainingTheStreetIncCustomerExecutive</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ThreatTrack_Issues</fullName>
+        <columns>Component__c</columns>
+        <columns>Story__c</columns>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Detected_Date__c</columns>
+        <columns>Environment__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Vipre Phase One</value>
+        </filters>
+        <label>VIPRE Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>ThreatTrackSecurityIncVIPRECustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>ThreatTrackSecurityIncVIPRECustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>ThreatTrackSecurityIncVIPRECustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Trex_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Trex Company-Customer Service</value>
+        </filters>
+        <label>Trex Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>TrexCompanyCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>TrexCompanyCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>TrexCompanyCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Two_Marines_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Two Marines Moving</value>
+        </filters>
+        <label>Two Marines Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerManager</portalRole>
+            <portalRole>AppcinoTechnologiesPvtLtdCustomerUser</portalRole>
+            <portalRole>TwoMarinesMovingCustomerExecutive</portalRole>
+            <portalRole>TwoMarinesMovingCustomerManager</portalRole>
+            <portalRole>TwoMarinesMovingCustomerUser</portalRole>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>USP_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Status__c</columns>
+        <columns>Backlog_Status__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>USP Sales Cloud Implementation</value>
+        </filters>
+        <label>USP Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>USPharmacopeialConventionCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>USPharmacopeialConventionCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>USPharmacopeialConventionCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Videa_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Backlog_Status__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Component__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>contains</operation>
+            <value>Videa - UE Support Deployment</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Videa Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>VideaCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>VideaCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>VideaCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Viewpoint_Phase_One</fullName>
+        <columns>NAME</columns>
+        <columns>Component__c</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Backlog_Status__c</columns>
+        <columns>Detected_By__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Viewpoint Phase 1</value>
+        </filters>
+        <label>Viewpoint Phase One</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerExecutive</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerManager</portalRoleAndSubordinates>
+            <portalRoleAndSubordinates>AppcinoTechnologiesPvtLtdCustomerUser</portalRoleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>myall</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Release__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Component__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Priority__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Ready for Review,Ready for QA,QA Complete,Complete</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>As Designed,Duplicate,Unable to Reproduce,Cancelled</value>
+        </filters>
+        <label>all very open</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ssall</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Component__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Salesforce System</value>
+        </filters>
+        <label>Salesforce Systems All Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ssback</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Release__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Component__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Salesforce System,RM Connect</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Backlog</value>
+        </filters>
+        <label>Salesforce Systems Backlog</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>sscurrent</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>QA_Owner__c</columns>
+        <columns>Environment__c</columns>
+        <columns>Component__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Salesforce System,RM Connect</value>
+        </filters>
+        <filters>
+            <field>Sprint_Start__c</field>
+            <operation>lessOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Sprint_End__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Salesforce System Current Sprint</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>sslast</fullName>
+        <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Salesforce System</value>
+        </filters>
+        <filters>
+            <field>Sprint_Start__c</field>
+            <operation>equals</operation>
+            <value>LAST_N_MONTHS:2</value>
+        </filters>
+        <filters>
+            <field>Sprint_End__c</field>
+            <operation>equals</operation>
+            <value>LAST_N_MONTHS:2</value>
+        </filters>
+        <label>Salesforce System Recently Implemented</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ssnext</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Name__c</columns>
+        <columns>Component__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Notes__c</columns>
+        <columns>Dev_Owner__c</columns>
+        <columns>DEV_LOE__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Product__c</field>
+            <operation>equals</operation>
+            <value>Salesforce System</value>
+        </filters>
+        <filters>
+            <field>Sprint_Start__c</field>
+            <operation>greaterThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Salesforce System Scheduled Issues</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>I-{00000}</displayFormat>
+        <label>Issue Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Issues</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Issue_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Component__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Resolution_Owner__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Sprint__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <listViewButtons>Bulk_Issue_Update_Entry</listViewButtons>
+        <listViewButtons>Bulk_Delete</listViewButtons>
+        <lookupDialogsAdditionalFields>Issue_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Component__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Resolution_Owner__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Sprint__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Issue_Name__c</searchFilterFields>
+        <searchFilterFields>Component__c</searchFilterFields>
+        <searchFilterFields>Resolution_Owner__c</searchFilterFields>
+        <searchFilterFields>Sprint__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchResultsAdditionalFields>Issue_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Resolution_Owner__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Sprint__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Component__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Actual_LOE_Not_Null</fullName>
+        <active>false</active>
+        <description>When a Issue is marked UAT Complete, As Designed, Unable To Reproduce or Complete,  the Actual LOE field cannot be null</description>
+        <errorConditionFormula>( ISPICKVAL( Status__c, &quot;UAT Complete&quot;) || ISPICKVAL( Status__c, &quot;Complete&quot;) || ISPICKVAL( Status__c, &quot;As Designed&quot;) || ISPICKVAL( Status__c, &quot;Unable To Reproduce&quot;) ) &amp;&amp; ( ISBLANK( Actual_LOE__c ) ||  Actual_LOE__c = 0.00 )</errorConditionFormula>
+        <errorDisplayField>Actual_LOE__c</errorDisplayField>
+        <errorMessage>When an ISSUE&apos;s Status is marked &apos;UAT Complete&apos;, &apos;As Designed&apos;, &apos;Unable To Reproduce&apos; or &apos;Complete&apos;, the Actual LOE field cannot be null</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Backlog_No_Sprint</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+TEXT(Status__c)=&quot;Backlog&quot;,OR(Sprint__c &lt;&gt; &quot;&quot;,Release__c &lt;&gt; &quot;&quot;)
+)</errorConditionFormula>
+        <errorMessage>You cannot define a SPRINT or RELEASE if the Status is &apos;Backlog&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>If_Test_Case_Must_Have_Test_Result</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( Source_Story_Test_Case__c &lt;&gt; &quot;&quot;, Source_Story_Test_Result__c =&quot;&quot;)</errorConditionFormula>
+        <errorMessage>When specifying the Source Test Case, you must also select the Source Test Result</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Must_Have_Initial_LOE</fullName>
+        <active>true</active>
+        <description>If Issue status is &apos;Planned&apos;,&apos;In Progress&apos;, or &apos;Complete&apos;, Estimated LOE must be captured. User must be standard or have the super user  custom permission</description>
+        <errorConditionFormula>( ISPICKVAL( Status__c , &quot;Planned&quot;) 
+ || ISPICKVAL( Status__c , &quot;In Progress&quot;) 
+ || ISPICKVAL( Status__c , &quot;Complete&quot;) )
+ &amp;&amp; ( ISNULL( DEV_LOE__c ) ||  ISBLANK( DEV_LOE__c ) )
+ &amp;&amp; ( ISPICKVAL( $Profile.UserType , &quot;Standard&quot;) || $Permission.Super_Community_User )</errorConditionFormula>
+        <errorDisplayField>DEV_LOE__c</errorDisplayField>
+        <errorMessage>If Issue status is &apos;Planned&apos;,&apos;In Progress&apos;, or &apos;Complete&apos;, Estimated LOE must be captured.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_QA_Owner_on_Ready_for_QA_Status</fullName>
+        <active>true</active>
+        <description>QA Owner is required when Status is set to &quot;Ready for QA&quot;.</description>
+        <errorConditionFormula>ISPICKVAL( Status__c , &quot;Ready for QA&quot;) &amp;&amp; ( ISNULL( QA_Owner__c ) || ISBLANK( QA_Owner__c ) )</errorConditionFormula>
+        <errorDisplayField>QA_Owner__c</errorDisplayField>
+        <errorMessage>QA Owner is required when Status is set to &apos;Ready for QA&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_not_Backlog_No_Sprint</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND( 
+TEXT(Status__c)&lt;&gt;&quot;Backlog&quot;,TEXT(Status__c)&lt;&gt;&quot;Duplicate&quot;,TEXT(Status__c)&lt;&gt; &quot;Cancelled&quot;,TEXT(Status__c)&lt;&gt;&quot;New&quot;,Sprint__c=&quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>Sprint__c</errorDisplayField>
+        <errorMessage>You must assign a SPRINT unless the Status is &apos;New&apos;, &apos;Backlog&apos;, &apos;Duplicate&apos;, or &apos;Cancelled&apos;.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Bulk_Delete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Bulk Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&apos;/soap/ajax/29.0/connection.js&apos;)} 
+try 
+{ 
+var selectedRecords = {!GETRECORDIDS( $ObjectType.Issue__c )}; 
+if(selectedRecords.length&lt;1) 
+alert(&apos;Please Select at Least One Row !&apos;); 
+else 
+{ 
+userConsent = confirm( 
+selectedRecords.length + 
+&apos; Record(s) will be Deleted. Continue ? &apos; 
+); 
+if(userConsent == true) 
+{ 
+delResult = sforce.connection.deleteIds(selectedRecords); 
+if (delResult[0].getBoolean(&quot;success&quot;)) 
+{ 
+alert(&apos;The Record(s) were Deleted Successfully.&apos;); 
+window.location.reload(); 
+} 
+else 
+alert( 
+&apos;The Record(s) Could Not be Deleted. Error Message: &apos; + 
+delResult[0].errors.message 
+); 
+} 
+} 
+} 
+catch(e) 
+{ 
+alert(&apos;The Action Could not be Completed. Error Message: &apos; + e); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Bulk_Issue_Entry</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Bulk Issue Entry</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>window.open(&apos;/apex/BulkIssuePage&apos;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Bulk_Issue_Update_Entry</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Bulk Issue Update/Entry</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>//mk edit
+var canId = window.location.href.substring(window.location.href.lastIndexOf(&apos;/&apos;) + 1);
+var recId = window.location.href.substring(window.location.href.lastIndexOf(&apos;/&apos;) + 1); 
+if (recId.indexOf(&quot;?&quot;) &gt;= 0){ 
+recId = window.location.href.substring(window.location.href.lastIndexOf(&apos;/&apos;) + 1, window.location.href.indexOf(&apos;?&apos;)); 
+} 
+var ids = {!GETRECORDIDS($ObjectType.Issue__c)}; 
+ 
+if (ids.length) { 
+if (ids.length &lt;= 25) { 
+window.location = &apos;/apex/BulkIssueManagerPage?ids=&apos; + ids.join(&apos;,&apos;) + &apos;&amp;recId=&apos; + recId + &apos;&amp;canId=&apos; + canId; 
+} else { 
+alert(&apos;Select 25 or less&apos;); 
+} 
+} else { 
+//alert(&apos;Select one or more Issues&apos;); 
+} 
+if (ids.length == 0){ 
+window.location = &apos;/apex/BulkIssueManagerPage?ids=&apos; + ids.join(&apos;,&apos;) + &apos;&amp;recId=&apos; + recId + &apos;&amp;canId=&apos; + canId;
+} 
+
+
+
+
+
+
+
+
+
+
+//
+//old
+//window.open(&apos;/apex/BulkIssuePage&apos;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Story</fullName>
+        <availability>online</availability>
+        <description>//mk edit
+goes to BulkStoryEntry
+//old
+///flow/IssuetoStoryButton?IssueID={!Issue__c.Id}</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Story</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>//mk edit
+//var ids = {!GETRECORDIDS($ObjectType.Story__c)}; 
+
+var canId = window.location.href.substring(window.location.href.lastIndexOf(&apos;/&apos;) + 1); 
+var recId = window.location.href.substring(window.location.href.lastIndexOf(&apos;/&apos;) + 1); 
+if (recId.indexOf(&quot;?&quot;) &gt;= 0){ 
+recId = window.location.href.substring(window.location.href.lastIndexOf(&apos;/&apos;) + 1, window.location.href.indexOf(&apos;?&apos;)); 
+} 
+window.location = &apos;/apex/BulkStoryManagerPage?recId=&apos; + recId + &apos;&amp;canId=&apos; + canId; 
+
+//
+
+
+
+
+//old
+//{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/connection.js&quot;)}
+//var newRecords = [];
+//var i = new sforce.SObject(&quot;Issue__c&quot;);
+//if(&apos;{!Issue__c.Create_Story__c}&apos;==&apos;true&apos;){
+//alert(&apos;A Story has already been created for this issue, please update that if needed&apos;)
+//}
+//else{
+//i.id =&quot;{!Issue__c.Id}&quot;;
+//i.Create_Story__c = true;
+//newRecords.push(i);
+//result = sforce.connection.update(newRecords);
+//window.location.reload();
+//}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Generate_XML_Package</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Generate XML Package</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/Package_xml?id={!Issue__c.SprintId__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Issue_For_Component</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Issue For Component</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a1h/e?CF00N1400000ArrS4={!Component__c.Name}&amp;CF00N1400000ArrS4_lkid=
+{!Component__c.Id}&amp;CF00N1400000ArrSU={!Component__c.Product__c}&amp;CF00N1400000ArrSU_lkid={!Component__c.ProductId__c}&amp;retURL={!Issue__c.Id}&amp;cancelURL={!Component__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Issue_For_Epic</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Issue For Epic</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a1h/e?CF00N1400000ArrSN={!Epic__c.Name}&amp;CF00N1400000ArrSN_lkid={!Epic__c.Id}&amp;CF00N1400000ArrSU={!Epic__c.Product__c}&amp;CF00N1400000ArrSU_lkid={!Epic__c.ProductId__c}&amp;retURL={!Issue__c.Id}&amp;cancelURL={!Epic__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Issue_For_Release</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Issue For Release</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a06/e?CF00Ni000000DM6X0={!Release__c.Name}&amp;CF00Ni000000DM6X0_lkid={!Release__c.Id}&amp;CF00Ni000000DM6Wv={!Release__c.Product__c}&amp;CF00Ni000000DM6Wv_lkid=
+{!Release__c.ProductId__c}&amp;retURL={!Issue__c.Id}&amp;cancelURL={!Release__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Issue_For_Sprint</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Issue For Sprint</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a06/e?CF00Ni000000DM6X0={!Sprint__c.Release__c}&amp;CF00Ni000000DM6X0_lkid={!Sprint__c.ReleaseId__c}&amp;CF00Ni000000DM6Wv={!Sprint__c.Product__c}&amp;CF00Ni000000DM6Wv_lkid={!Sprint__c.ProductId__c}&amp;CF00Ni000000DM6X5={!Sprint__c.Name}&amp;CF00Ni000000DM6X5_lkid={!Sprint__c.Id}&amp;retURL={!Issue__c.Id}&amp;cancelURL={!Sprint__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Issue_For_Story</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Issue For Story</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>../a1h/e?CF00N1400000ArrSW={!Story__c.Release__c}&amp;CF00N1400000ArrSW_lkid={!Story__c.ReleaseId__c}&amp;CF00N1400000ArrSU={!Story__c.Product__c}&amp;CF00N1400000ArrSU_lkid={!Story__c.ProductId__c}&amp;CF00N1400000ArrSb={!Story__c.Name}&amp;CF00N1400000ArrSb_lkid={!Story__c.Id}&amp;CF00N1400000ArrSc={!Story__c.Sprint__c}&amp;CF00N1400000ArrSc_lkid={!Story__c.SprintId__c}&amp;CF00N1400000ArrS4={!Story__c.Component__c}&amp;CF00N1400000ArrS4_lkid={!Story__c.ComponentId__c}&amp;retURL={!Issue__c.Id}&amp;cancelURL={!Story__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Issue_For_Test_Case</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Issue For Test Case Result</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a1h/e?CF00N1400000ArrSW={!Test_Case__c.Release__c}&amp;CF00N1400000ArrSW_lkid={!Test_Case__c.ReleaseId__c}&amp;CF00N1400000ArrSU={!Test_Case__c.Product__c}&amp;CF00N1400000ArrSU_lkid={!Test_Case__c.ProductId__c}&amp;CF00N1400000ArrSb={!Test_Case__c.Story__c}&amp;CF00N1400000ArrSb_lkid={!Test_Case__c.StoryId__c}&amp;CF00N1400000ArrSc={!Test_Case__c.Sprint__c}&amp;CF00N1400000ArrSc_lkid={!Test_Case__c.SprintId__c}&amp;CF00N1400000ArrS4={!Test_Case__c.Component__c}&amp;CF00N1400000ArrS4_lkid={!Test_Case__c.ComponentId__c}&amp;CF00N1400000ArrSZ={!Test_Case__c.Name}&amp;CF00N1400000ArrSZ_lkid={!Test_Case__c.Id}&amp;retURL={!Issue__c.Id}&amp;cancelURL={!Test_Case__c.Id}</url>
+    </webLinks>
+</CustomObject>
